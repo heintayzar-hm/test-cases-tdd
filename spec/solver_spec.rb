@@ -17,4 +17,11 @@ describe Solver do
             expect(@solver.factorial(5)).to eql(120)
         end
       end
+
+    context 'solves that problem reverse' do
+        it 'returns  when olleh when the word is hello' do
+            expect(@solver.reverse("hello")).to eql("olleh")
+        end
+       
+      end
 end
