@@ -24,4 +24,22 @@ describe Solver do
         end
        
       end
+
+    context 'solves that problem fizzbuzz' do
+        it 'returns  "fizz" when n is divisible by 3' do
+            expect(@solver.fizzbuzz(6)).to eql("fizz")
+        end
+       
+        it 'returns  "buzz" when n is divisible by 5' do
+            expect(@solver.fizzbuzz(10)).to eql("buzz")
+        end
+
+        it 'returns  "fizzbuzz" when n is divisible by 3 and 5' do
+            expect(@solver.fizzbuzz(30)).to eql("fizzbuzz")
+        end
+
+        it 'returns  "7" when n is not divisisble divisible by 3, 5 ,15' do
+            expect(@solver.fizzbuzz(7)).to eql("7")
+        end
+      end
 end
