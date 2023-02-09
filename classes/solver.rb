@@ -1,19 +1,20 @@
 class Solver
-    def factorial(n)
-        raise 'n must be greater than or equal to 0' if n < 0
-        return 1 if n.zero?
+  def factorial(number)
+    raise 'n must be greater than or equal to 0' if number.negative?
+    return 1 if number.zero?
 
-        return n * factorial(n - 1)
-    end
+    number * factorial(number - 1)
+  end
 
-    def reverse(word)
-        return word.reverse
-    end
+  def reverse(word)
+    word.reverse
+  end
 
-    def fizzbuzz(n)
-      return "fizzbuzz" if (n % 15).zero?
-      return "fizz" if (n % 3).zero?
-      return "buzz" if (n % 5).zero?
-      return n.to_s
-    end
+  def fizzbuzz(number)
+    return 'fizzbuzz' if (number % 15).zero?
+    return 'fizz' if (number % 3).zero?
+    return 'buzz' if (number % 5).zero?
+
+    number.to_s
+  end
 end
