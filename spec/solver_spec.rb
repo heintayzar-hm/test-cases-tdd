@@ -1,4 +1,4 @@
-require_relative 'helper'
+require_relative 'helper_spec'
 
 describe Solver do
     before :each do
@@ -9,7 +9,9 @@ describe Solver do
             expect(@solver.factorial(0)).to eql(1)
         end
         it 'raise error when factorial is -1' do
-            expect(@solver.factorial(-1)).to raise_error(Solver::Error)
+            expect do
+                @solver.factorial(-1) 
+            end.to raise_error('n must be greater than or equal to 0')
         end
         it 'returns 120 when factorial is 5' do
             expect(@solver.factorial(5)).to eql(120)
